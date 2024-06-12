@@ -105,20 +105,35 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+
+    const sidebarBtnMobile = document.getElementById('toggleSidebarMobile');
+    const sidebarSticky = document.querySelector('.sidebar-sticky')
+    sidebarSticky.style.width = '-150px'
+    sidebarBtnMobile.addEventListener('click', () => {
+        alert('hey')
+        if (sidebarSticky.style.width === '-150px') {
+            sidebarSticky.style.width = '0'
+        }
+        else {
+            sidebarSticky.style.width = '-150PX'
+        }
+    }
+    )
+
     // Toggle Sidebar
-    document.getElementById('toggleSidebar').addEventListener('click', function () {
-        document.querySelector('.sidebar').classList.toggle('sidebar-collapsed');
-    });
+    // document.getElementById('toggleSidebar').addEventListener('click', function () {
+    //     document.querySelector('.sidebar').classList.toggle('sidebar-collapsed');
+    // });
 
-    // Toggle Mobile Sidebar
-    document.getElementById('toggleSidebarMobile').addEventListener('click', function () {
-        document.querySelector('.sidebar').classList.toggle('active');
-    });
+    // // Toggle Mobile Sidebar
+    // document.getElementById('toggleSidebarMobile').addEventListener('click', function () {
+    //     document.querySelector('.sidebar').classList.toggle('active');
+    // });
 
-    // Toggle Theme
-    document.getElementById('themeToggle').addEventListener('click', function () {
-        document.body.classList.toggle('dark-theme');
-        document.body.classList.toggle('light-theme');
-        this.innerText = document.body.classList.contains('dark-theme') ? 'Light Theme' : 'Dark Theme';
-    });
+    // // Toggle Theme
+    // document.getElementById('themeToggle').addEventListener('click', function () {
+    //     document.body.classList.toggle('dark-theme');
+    //     document.body.classList.toggle('light-theme');
+    //     this.innerText = document.body.classList.contains('dark-theme') ? 'Light Theme' : 'Dark Theme';
+    // });
 });
