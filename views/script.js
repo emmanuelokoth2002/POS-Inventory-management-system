@@ -108,14 +108,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const sidebarBtnMobile = document.getElementById('toggleSidebarMobile');
     const sidebarSticky = document.querySelector('.sidebar-sticky')
-    sidebarSticky.style.width = '-150px'
+    sidebarSticky.style.width = '-250px'
     sidebarBtnMobile.addEventListener('click', () => {
-        alert('hey')
-        if (sidebarSticky.style.width === '-150px') {
-            sidebarSticky.style.width = '0'
+        // alert('hey')
+        if (sidebarSticky.style.left === '-250px') {
+            sidebarSticky.style.left = '0'
         }
         else {
-            sidebarSticky.style.width = '-150PX'
+            sidebarSticky.style.left = '-250PX'
         }
     }
     )
@@ -130,10 +130,10 @@ document.addEventListener('DOMContentLoaded', function () {
     //     document.querySelector('.sidebar').classList.toggle('active');
     // });
 
-    // // Toggle Theme
-    // document.getElementById('themeToggle').addEventListener('click', function () {
-    //     document.body.classList.toggle('dark-theme');
-    //     document.body.classList.toggle('light-theme');
-    //     this.innerText = document.body.classList.contains('dark-theme') ? 'Light Theme' : 'Dark Theme';
-    // });
+    // Toggle Theme
+    document.getElementById('themeToggle').addEventListener('click', function () {
+        document.body.classList.toggle('dark-theme');
+        document.body.classList.toggle('light-theme');
+        this.innerText = document.body.classList.contains('dark-theme') ? 'Light Theme' : 'Dark Theme';
+    });
 });
